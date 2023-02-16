@@ -21,13 +21,16 @@ bibliography: references.bib
 library(tidyverse)
 library(palmerpenguins)
 ```
+view @fig-APOD
+```{r, echo = FALSE}
+#| label: fig-APOD
+#| fig-cap: "Sick pic of stars tday from homeboy NASA"
 
-```{r}
+library(knitr)
+library(here)
+include_graphics(here::here("inputs/NASA_APOD_20230216.jpg")) 
 
 ```
-
-![NASA APOD on Today!! Cool beans](images/NASA_APOD_20230216.jpg)
-
 # Introduction
 
 You can and should cross-reference sections and sub-sections. For instance, @sec-data and @sec-first-point.
