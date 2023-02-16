@@ -9,13 +9,22 @@
 
 
 #### Workspace setup ####
-library(opendatatoronto)
+library(httr)
 library(tidyverse)
-# [...UPDATE THIS...]
+library(xml2)
 
 #### Download data ####
-# [...ADD CODE HERE TO DOWNLOAD...]
+NASA_APOD_20230216 <-
+  GET("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2023-02-16")
 
+content(NASA_APOD_20230216)$url |>
+  download.file(destfile = 'inputs/NASA_APOD_20230216.jpg')
+
+NASA_APOD_20011122 <-
+  GET("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2001-11-22")
+
+content(NASA_APOD_20011122)$url |>
+  download.file(destfile = 'inputs/NASA_APOD_20011122.jpg')
 
 
 #### Save data ####

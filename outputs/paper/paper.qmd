@@ -19,6 +19,8 @@ bibliography: references.bib
 
 library(tidyverse)
 library(palmerpenguins)
+library(knitr)
+library(here)
 ```
 # NASA APOD Pics
 
@@ -27,8 +29,7 @@ view @fig-APOD
 #| label: fig-APOD
 #| fig-cap: "Sick pic of stars tday from homeboy NASA. Take note of the smaller figure size, likely due to lower resolution way back in '01."
 
-library(knitr)
-library(here)
+
 include_graphics(here::here("inputs/NASA_APOD_20230216.jpg")) 
 
 ```
