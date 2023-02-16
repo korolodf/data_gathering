@@ -1,9 +1,8 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Some NASA APODs"
+subtitle: "Playing with APIs"
 author: 
-  - First author
-  - Another author
+  - Finn
 thanks: "Code and data are available at: LINK."
 date: "`r Sys.time()`"
 date-format: "D MMMM YYYY"
@@ -21,16 +20,25 @@ bibliography: references.bib
 library(tidyverse)
 library(palmerpenguins)
 ```
+# NASA APOD Pics
+
 view @fig-APOD
-```{r, echo = FALSE}
+```{r, echo = FALSE, message = FALSE}
 #| label: fig-APOD
-#| fig-cap: "Sick pic of stars tday from homeboy NASA"
+#| fig-cap: "Sick pic of stars tday from homeboy NASA. Take note of the smaller figure size, likely due to lower resolution way back in '01."
 
 library(knitr)
 library(here)
 include_graphics(here::here("inputs/NASA_APOD_20230216.jpg")) 
 
 ```
+And check out the one from my birthday XD (gross)
+```{r, echo = FALSE, message = FALSE}
+#| label: fig-APODbday
+#| fig-cap: "NASA saw this on my birthday... feeling ripped off"
+include_graphics(here::here("inputs/NASA_APOD_20011122.jpg")) 
+```
+
 # Introduction
 
 You can and should cross-reference sections and sub-sections. For instance, @sec-data and @sec-first-point.
